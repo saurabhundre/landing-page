@@ -1,0 +1,361 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, html {
+    font-family: "IBM Plex Sans", sans-serif !important;
+}
+
+
+.thumbnails{
+ background: #F0F2FF;
+}
+.thumbnails .bg-white:hover
+{
+	box-shadow: 0px 10px 10px #d3d3d3;
+}
+.hero-image{
+	max-width:1000px;
+	z-index: 99;
+}
+.mobile-image{
+    position: absolute;
+    left: 0;
+    max-width: 224px;
+    bottom: -20px;
+    z-index: 999;
+}
+.card-image{
+	position: absolute;
+    left: 140px;
+    z-index: 9999;
+    max-height: 250px;
+    bottom: -30px;
+}
+.bg-grey-1{
+    background:#F4F5FC;
+}
+.bg-dark{
+    background: #000B2B;
+}
+.bg-blue-900 {
+    --tw-bg-opacity: 1;
+    background-color: #001450 !important;
+}
+.bg-card-image{
+       background-image: url(../public/images/card-bg.svg);
+        background-size: cover;
+}
+.footer-cta{
+     background: url(../public/images/footer-cta.svg) #000B2B !important;
+    background-size: cover !important
+}
+.footer-cta button{
+    background: #fff !important;
+}
+.footer-cta p{
+    font-weight: 400;
+}
+.rounded-24 {
+    border-radius: 28px;
+}
+.features-card{
+    min-height: 460px;
+    position: relative;
+    box-shadow: -0px -11px 50px #000;
+}
+.features-card .app-img{
+    position: absolute;
+    right: 40px;
+    height: 340px;
+    bottom: 40px;
+}
+.app-img.left{
+    left: 30px;
+    bottom: 40px;
+}
+.delivery-category img{
+    max-width: 160px;
+}
+
+footer{
+    background: #000B2B;
+}
+footer p{
+        font-size: 14px;
+    font-weight: 300;
+}
+footer li{
+    font-size: 14px;
+        margin-bottom: 10px;
+}
+footer i{
+    background: #2B61F7;
+    border-radius: 50px;
+    padding: 8px;
+    font-size: 14px;
+}
+button{
+    background: #2B61F7 !important;
+    font-size: 14px !important;
+}
+button:hover{
+    background: #2B66F7 !important;
+}
+
+
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,30px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,30px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+
+.download-app-footer{
+    min-width: 260px;
+}
+.choose-milkrun-row .rounded-lg{
+    background:#FAFAFC;
+}
+
+.stack__card {
+    position: sticky;
+    top: 48px;
+    left: 50%;
+    margin-left: 0px;
+}
+.stack__card:nth-child(1) {
+    padding-top: 24px;
+}
+.stack__card:nth-child(2) {
+    padding-top: 48px;
+
+}
+.stack__card:nth-child(3) {
+  padding-top: 72px;
+}
+.stack__card:nth-child(4) {
+   padding-top: 96px;
+}
+.stack__card:nth-child(5) {
+  padding-top: 120px;
+}
+.personal-cards .features-card .app-img{
+    max-height: 400px;
+}
+.personal-cards .app-img.left {
+    left: 30px;
+    bottom: 0px;
+}
+.text-howtobook{
+    display: flex;
+    align-items: center;
+}
+.personal-cards .text-howtobook img{
+    height: 70px;
+    margin-right: 24px;
+}
+.driver-thumbnails .bg-white{
+    background: #FAFAFC;
+    border: 1px solid #e5e8ff;
+}
+.web-forms .upload-form{
+    background: #F7F9FF !important;
+    height: 48px;
+    justify-content: space-between;
+    padding: 0 16px;
+    border: 1px solid #d1d5db;
+}
+.web-forms .upload-form img{
+    width: 24px;
+}
+.web-forms select{
+    padding: 0 16px !important;
+    height: 48px !important;
+    font-size: 14px;
+}
+.web-forms input{
+    padding: 0 16px !important;
+    height: 48px !important;
+    font-size: 14px;
+}
+
+
+/* Mobile Menu */
+#mobile-menu {
+    display: none;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform: translateX(100%);
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    height: 100%;
+    width: 100%;
+}
+
+#mobile-menu.open {
+    display: block;
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+/* Backdrop for Mobile Menu */
+#mobile-menu ~ div {
+    display: none;
+}
+
+#mobile-menu.open ~ div {
+    display: block;
+}
+
+/* Toggle Button */
+#mobile-menu-button,
+#close-menu-button {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+#mobile-menu-button:hover,
+#close-menu-button:hover {
+    transform: scale(1.1);
+}
+.mobile-banner{
+    display: none !important;
+}
+
+.counts .shadow-lg{
+    text-align: left !important;
+}
+.banner-hero-image{
+    margin-top: -80px;
+}
+.second-section{
+    padding-top: 10rem;
+    margin-top: -114px;
+    background: #f3f7ff;
+}
+
+@media only screen and (max-width: 600px) {
+  .features-card{
+            padding: 34px !important;
+    }
+    .app-img.left {
+    left: 0;
+    bottom: 0;
+}
+.mobile-banner{
+    display: block !important;
+}
+footer{
+    padding: 16px !important;
+}
+.brand-logos h4{
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+.brand-logos img{
+   max-width: 100px;
+}
+.brand-logos .grid{
+   padding: 28px 28px 0;
+}
+.mobile-banner-text{
+    line-height: 22px !important;
+    font-size: 14px;
+            margin-top: 10px !important;
+}
+.text-3xl{
+        font-size: 24px !important;
+        line-height: 32px !important;
+}
+.text-4xl{
+    font-size: 28px !important;
+        line-height: 32px !important;
+}
+.delivery-category img {
+    max-width: 120px;
+}
+
+.delivery-category blockquote{
+    padding: 24px;
+}
+.bg-dark{
+    padding: 24px;
+}
+.bg-dark p{
+    font-size: 16px !important;
+            line-height: 24px;
+}
+.features-card {
+    min-height: 400px;
+    position: relative;
+    box-shadow: -0px -11px 50px #000;
+}
+.features-card .app-img{
+    right: 0;
+}
+.mob-p-24{
+    padding: 24px !important;
+}
+.copy-rights{
+    display: block !important;
+    font-size: 11px;
+}
+.copy-rights .justify-center{
+    justify-content:left !important;
+}
+.copy-rights span{
+    display: block !important;
+    font-size: 11px;
+    text-align: left;
+}
+footer h3{
+    margin-bottom: 5px !important;
+}
+.banner-hero-image{
+    margin-top: 0px;
+}
+}
+
+
